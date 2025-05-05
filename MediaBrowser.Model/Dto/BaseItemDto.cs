@@ -649,6 +649,12 @@ namespace MediaBrowser.Model.Dto
         public int? MusicVideoCount { get; set; }
 
         /// <summary>
+        /// Gets or sets the short video count.
+        /// </summary>
+        /// <value>The short video count.</value>
+        public int? ShortVideoCount { get; set; }
+
+        /// <summary>
         /// Gets or sets a value indicating whether [enable internet providers].
         /// </summary>
         /// <value><c>true</c> if [enable internet providers]; otherwise, <c>false</c>.</value>

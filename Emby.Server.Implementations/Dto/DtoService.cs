@@ -352,6 +352,7 @@ namespace Emby.Server.Implementations.Dto
                 dto.MovieCount = taggedItems.Count(i => i is Movie);
                 dto.TrailerCount = taggedItems.Count(i => i is Trailer);
                 dto.MusicVideoCount = taggedItems.Count(i => i is MusicVideo);
+                dto.ShortVideoCount = taggedItems.Count(i => i is ShortVideo);
                 dto.SeriesCount = taggedItems.Count(i => i is Series);
                 dto.ProgramCount = taggedItems.Count(i => i is LiveTvProgram);
                 dto.SongCount = taggedItems.Count(i => i is Audio);

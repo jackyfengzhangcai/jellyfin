@@ -464,7 +464,8 @@ public class LibraryController : BaseJellyfinApiController
             SongCount = GetCount(BaseItemKind.Audio, user, isFavorite),
             MusicVideoCount = GetCount(BaseItemKind.MusicVideo, user, isFavorite),
             BoxSetCount = GetCount(BaseItemKind.BoxSet, user, isFavorite),
-            BookCount = GetCount(BaseItemKind.Book, user, isFavorite)
+            BookCount = GetCount(BaseItemKind.Book, user, isFavorite),
+            ShortVideoCount = GetCount(BaseItemKind.ShortVideo, user, isFavorite)
         };
 
         return counts;
@@ -981,6 +982,7 @@ public class LibraryController : BaseJellyfinApiController
             CollectionType.homevideos => new[] { "Video", "Photo" },
             CollectionType.photos => new[] { "Video", "Photo" },
             CollectionType.musicvideos => new[] { "MusicVideo" },
+            CollectionType.shortvideos => new[] { "ShortVideo" },
             _ => new[] { "Series", "Season", "Episode", "Movie" }
         };
     }
@@ -1007,7 +1009,8 @@ public class LibraryController : BaseJellyfinApiController
             {
                 return !(string.Equals(type, "Season", StringComparison.OrdinalIgnoreCase)
                          || string.Equals(type, "Episode", StringComparison.OrdinalIgnoreCase)
-                         || string.Equals(type, "MusicVideo", StringComparison.OrdinalIgnoreCase));
+                         || string.Equals(type, "MusicVideo", StringComparison.OrdinalIgnoreCase)
+                         || string.Equals(type, "ShortVideo", StringComparison.OrdinalIgnoreCase));
             }
 
             return string.Equals(name, "TheTVDB", StringComparison.OrdinalIgnoreCase)
@@ -1028,7 +1031,8 @@ public class LibraryController : BaseJellyfinApiController
                 return !string.Equals(type, "Series", StringComparison.OrdinalIgnoreCase)
                        && !string.Equals(type, "Season", StringComparison.OrdinalIgnoreCase)
                        && !string.Equals(type, "Episode", StringComparison.OrdinalIgnoreCase)
-                       && !string.Equals(type, "MusicVideo", StringComparison.OrdinalIgnoreCase);
+                       && !string.Equals(type, "MusicVideo", StringComparison.OrdinalIgnoreCase)
+                       && !string.Equals(type, "ShortVideo", StringComparison.OrdinalIgnoreCase);
             }
 
             return string.Equals(name, "TheTVDB", StringComparison.OrdinalIgnoreCase)

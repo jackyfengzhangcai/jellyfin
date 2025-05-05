@@ -200,6 +200,11 @@ namespace Jellyfin.Data.Enums
         /// <summary>
         /// Item is year.
         /// </summary>
-        Year
+        Year,
+
+        /// <summary>
+        /// Item is shortVideo.
+        /// </summary>
+        ShortVideo
     }
 }

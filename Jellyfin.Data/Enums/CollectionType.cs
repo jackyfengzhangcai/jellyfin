@@ -74,6 +74,11 @@ public enum CollectionType
     folders = 12,
 
     /// <summary>
+    /// ShortVideos collection.
+    /// </summary>
+    shortvideos = 90,
+
+    /// <summary>
     /// Tv show series collection.
     /// </summary>
     [OpenApiIgnoreEnum]

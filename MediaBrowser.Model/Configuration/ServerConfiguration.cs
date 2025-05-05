@@ -60,6 +60,10 @@ public class ServerConfiguration : BaseApplicationConfiguration
             new MetadataOptions
             {
                 ItemType = "Episode",
+            },
+            new MetadataOptions
+            {
+                ItemType = "ShortVideo",
             }
         };
     }

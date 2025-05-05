@@ -60,6 +60,12 @@ namespace MediaBrowser.Model.Dto
         public int MusicVideoCount { get; set; }
 
         /// <summary>
+        /// Gets or sets the short video count.
+        /// </summary>
+        /// <value>The short video count.</value>
+        public int ShortVideoCount { get; set; }
+
+        /// <summary>
         /// Gets or sets the box set count.
         /// </summary>
         /// <value>The box set count.</value>
